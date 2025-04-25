@@ -1,4 +1,4 @@
-# Soluções Beecrowd – Desenvolvimento e Implementação de Algoritmos (UERJ)
+# Soluções da Beecrowd – Desenvolvimento e Implementação de Algoritmos (UERJ)
 
 Este repositório contém minhas soluções para problemas da plataforma **Beecrowd**, desenvolvidas no contexto da disciplina **Desenvolvimento e Implementação de Algoritmos**, oferecida pela **Universidade do Estado do Rio de Janeiro (UERJ)**.
 

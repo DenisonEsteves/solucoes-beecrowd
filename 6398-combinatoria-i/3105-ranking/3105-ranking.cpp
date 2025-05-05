@@ -5,7 +5,8 @@ constexpr int MODULO = 1000000007;
 
 long long calcular_rankings(const int total_alunos, const int alunos_escola)
 {
-    if (total_alunos == alunos_escola) return 1;
+    if (total_alunos == alunos_escola)
+        return 1;
 
     long long acumulador = total_alunos;
     for (int i = total_alunos - 1; i > alunos_escola; i--)
@@ -14,7 +15,8 @@ long long calcular_rankings(const int total_alunos, const int alunos_escola)
     return acumulador;
 }
 
-int main() {
+int main()
+{
     int num_testes;
     cin >> num_testes;
 

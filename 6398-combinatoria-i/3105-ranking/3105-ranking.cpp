@@ -3,7 +3,7 @@
 using namespace std;
 constexpr int MODULO = 1000000007;
 
-long long calcular_rankings(const int total_alunos, const int alunos_escola)
+long long calcular_rankings(int total_alunos, int alunos_escola)
 {
     if (total_alunos == alunos_escola)
         return 1;

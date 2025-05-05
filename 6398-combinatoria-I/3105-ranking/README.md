@@ -17,9 +17,9 @@ Para cada caso de teste, escreva em uma linha o inteiro que representa a quantid
 
 | Samples Input | Samples Output |
 |---------------|----------------|
-| 5             | 1              |
-| 3 3           | 4              |
-| 4 3           | 3991680        |
-| 12 5          | 1              |
-| 1000 1000     | 1000000        |
-| 1000000 999999| |
+| 5             |                |
+| 3 3           | 1              |
+| 4 3           | 4              |
+| 12 5          | 3991680        |
+| 1000 1000     | 1              |
+| 1000000 999999|1000000         |

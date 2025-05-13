@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-constexpr int MAX = 101;
-vector<vector<int>> MEMO(MAX, vector<int>(MAX, -1));
-const unsigned long long MOD = pow(2, 63);
 
-unsigned long long num_divisoes(int num_itens, int num_aventureiros)
+char verificar_divisao_exata(const string& num_balas, long long num_irmaos)
 {
-    if(MEMO.at(num_itens).at(num_aventureiros) != -1)
-        return MEMO.at(num_itens).at(num_aventureiros);
-    else if(num_aventureiros == 1 || num_itens == num_aventureiros)
-        return 1;
-    else
-        return (num_divisoes(num_itens - 1, num_aventureiros) * num_aventureiros ) % MOD
-              + num_divisoes(num_itens - 1, num_aventureiros - 1);
+    string balas_invertidas = num_balas;
+    reverse(balas_invertidas.begin(), balas_invertidas.end());
+
+    long long base = 1, resto = 0;
+
+    for (char digito_bala : balas_invertidas)
+    {
+        int digito = digito_bala - '0';
+        resto = (resto + (digito * base) % num_irmaos) % num_irmaos;
+        base = (base * 10) % num_irmaos;
+    }
+
+    return resto == 0 ? 'S' : 'N';
 }
 
 int main()
@@ -21,11 +23,12 @@ int main()
     int num_testes;
     cin >> num_testes;
 
-    while(num_testes--)
+    while (num_testes--)
     {
-        int num_itens, num_aventureiros;
-        cin >> num_itens >> num_aventureiros;
+        string num_balas;
+        long long num_irmaos;
+        cin >> num_balas >> num_irmaos;
 
-        cout << num_divisoes(num_itens, num_aventureiros) << endl;
+        cout << verificar_divisao_exata(num_balas, num_irmaos) << endl;
     }
 }
